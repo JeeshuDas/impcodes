@@ -1,0 +1,62 @@
+import java.util.*;
+class main
+{
+    public static void main(String args[])
+    {
+        int mx[][]={{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20},{21,22,23,24,25}};
+        int z=0;
+        for(int i=0;i<5;i++)
+        {
+            for(int j=0;j<5;j++)
+            {
+                System.out.print(mx[i][j]+"    ");
+            }
+            System.out.println("\n");
+        }
+        int a=0,b=4,c=0,d=5,e=5,f=5,g=4,h=0;
+        for(int he=0;he<3;he++)
+        {
+            for(int k=a;k<=b;k++)
+            {
+            System.out.print(mx[a][k]+" _ ("+a+" "+k+") ");
+            }
+            System.out.println();
+            
+            
+        
+            for(int k=c;k<d-1;k++)
+            {
+                System.out.print(mx[k][d-1]+" _ ");
+            }
+            System.out.println();
+            
+            
+        
+            for(int k=f-1;k>z;k--)
+            {
+                System.out.print(mx[e-1][k]+" _ ");
+            }
+            z++;
+            System.out.println();
+            
+            
+        
+            for(int k=g;k>h;k--)
+            {
+                System.out.print(mx[k][h]+" _ ");
+            }
+            System.out.println();
+            a++;
+            b--;
+            
+            c++;
+            d--;
+            
+            e--;
+            f--;
+            
+            g--;
+            h++;
+        }
+    }
+}
