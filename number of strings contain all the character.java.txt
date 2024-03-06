@@ -1,0 +1,37 @@
+import java.util.*;
+class Main
+{
+  public static void main(String args[])
+  {
+    Scanner sc=new Scanner(System.in);
+    int add=0;
+    String st=sc.nextLine();
+    for(int i=0;i<st.length();i++)
+    {
+        String s="";
+        int count=0;
+        for(int j=i;j<st.length();j++)
+        {
+            s+=st.charAt(j);
+          //System.out.println(s);
+            int a=0,b=0,c=0;
+            for(int k=0;k<s.length();k++)
+            {
+                if(s.charAt(k)=='a')
+                a=1;
+                if(s.charAt(k)=='b')
+                b=1;
+                if(s.charAt(k)=='c')
+                c=1;
+            }
+            if(a==1 && b==1 && c==1)
+            {
+              count++;
+            }
+      add+=count;
+    }
+    System.out.println(add);
+  }
+}
+        
+      
