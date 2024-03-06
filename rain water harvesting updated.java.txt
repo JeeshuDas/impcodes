@@ -1,0 +1,33 @@
+import java.util.*;
+class main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int add=0;
+        String matrix[][]={{"  ","  "," |","  "," |"},{" |","  "," |","  "," |"},{" |","  "," |","  "," |"},{" |","  "," |","  "," |"}};
+        for(int i=0;i<4;i++)
+        {
+            int cw=0,tot=0;
+            for(int j=0;j<5;j++)
+            {
+                if(matrix[i][j]==" |")
+                {
+                    cw++;
+                }
+                if(cw>=1 && matrix[i][j]=="  ")
+                {
+                    tot++;
+                }
+                System.out.print(matrix[i][j]+" ");
+            }
+            System.out.println("water blocks "+tot+"   wall blocks "+cw);
+            if(cw>1)
+            {
+                add+=tot;
+            }
+            System.out.println();
+        }
+        System.out.println("total water blocks "+add);
+    }
+}
