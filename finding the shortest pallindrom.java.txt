@@ -1,0 +1,40 @@
+import java.util.*;
+class main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.next();
+        String ls="",rs="";
+        int c=0;
+        String t="";
+        for(int i=0;i<s.length()/2;i++)
+        {
+            ls+=s.charAt(i);
+            rs=s.charAt(s.length()-1-i)+rs;
+        }
+        for(int i=0;i<ls.length();i++)
+        {
+            c=0;
+            for(int j=0;j<rs.length();j++)
+            {
+                if(ls.charAt(i)==rs.charAt(j))
+                {
+                    c=1;
+                }
+            }
+            if(c==0)
+            {
+                //System.out.print(ls.charAt(i));
+                t+=ls.charAt(i);
+            }
+        }
+        s=t+rs;
+        //System.out.print(s);
+        for(int i=s.length()-1;i>0;i--)
+        {
+            System.out.print(s.charAt(i));
+        }
+        System.out.print(s);
+    }
+}
