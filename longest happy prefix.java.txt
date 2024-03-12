@@ -1,0 +1,30 @@
+import java.util.*;
+class Main
+{
+  public static void main(String args[])
+  {
+    Scanner sc=new Scanner(System.in);
+    String s=sc.next();
+    String s1="";
+    int x=0;
+   	//LinkedList<String> li = new LinkedList<>();
+    for(int i=1;i<s.length();i++)
+    {
+      //System.out.println(s.substring(0,i)+"  "+s.substring(s.length()-i,s.length())); 
+      String a=s.substring(0,i);
+      String b=s.substring(s.length()-i,s.length());
+      //System.out.print(a+" "+b+" ");
+      //if(s.substring(0,i)==s.substring(s.length()-i,s.length()))
+        //System.out.print(s.substring(0,i));
+      if(a.equals(b))
+      {
+        //li.addFirst(a);
+        s1=s.substring(0,i);
+        //System.out.println(a+" ");
+      	//break;
+      }
+    }
+    System.out.print(s1);
+    //System.out.println(li.get(0));
+  }
+}
