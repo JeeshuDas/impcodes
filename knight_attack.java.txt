@@ -1,0 +1,37 @@
+import java.util.*;
+class main
+{
+    int test(int n,int m)
+    {
+        int count=0;
+        if(n+2<=8)
+        {
+            if(m+1<=8)
+            count++;
+            if(m-1>=1)
+            count++;
+        }
+        if(n-2>=1)
+        {
+            if(m+1<=8)
+            count++;
+            if(m-1>=1)
+            count++;
+        }
+        return count;
+    }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        main ob=new main();
+        System.out.print("row: ");
+        int r=sc.nextInt();
+        System.out.print("col: ");
+        int c=sc.nextInt();
+        int count=0;
+        count+=ob.test(r,c);
+        count+=ob.test(c,r);
+        System.out.println("total attacks: "+count);
+        System.out.println("un-attacked blocks: "+(64-count));
+    }
+}
