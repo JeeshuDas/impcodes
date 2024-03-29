@@ -9,9 +9,7 @@ class main
         for(int i=0;i<cit.length;i++)
         {
             if(cit[i]>max)
-            {
-                max=cit[i];
-            }
+            max=cit[i];
         }
         int count=0,f=0,i=0;
         for(i=0;i<=max;i++)
@@ -20,9 +18,7 @@ class main
             for(int j=0;j<cit.length;j++)
             {
                 if(cit[j]>=i)
-                {
-                    count++;
-                }
+                count++;
                 if(count==i)
                 {
                     f=i;
