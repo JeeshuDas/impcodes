@@ -1,5 +1,4 @@
-Jeeshu Das >> 21BPS1477
-Lab 9
+//works with DMAS operators 
 
 #include <stdio.h>
 #include<string.h>
