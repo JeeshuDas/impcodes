@@ -1,0 +1,26 @@
+Jeeshu Das >> 21BPS1477
+Lab 9
+
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char ex[20];
+    scanf("%s",ex);
+    //printf("%s",ex);
+    for(int i=0;i<strlen(ex);i++)
+    {
+        if(ex[i]=='*' ||ex[i]=='/')
+        {
+            printf("Y = %c %c %c\n",ex[i-1],ex[i],ex[i+1]);
+            ex[i-1]=ex[i+1]=ex[i]='Y';
+        }
+    }
+    for(int i=0;i<strlen(ex);i++)
+    {
+        if(ex[i]=='+' ||ex[i]=='-')
+        printf("Z = Z %c %c\n",ex[i],ex[i+1]);
+    }
+    if(ex[1]=='=')
+    printf("%c = Z",ex[0]);
+}
