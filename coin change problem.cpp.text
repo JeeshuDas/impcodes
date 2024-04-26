@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n=5;
+    int ar[]={4,3,2,1}; // sort it before operation
+    int counter=0;
+    for(int j=0;j<4;j++)
+    {
+        int i=j;
+        int sum=0;
+        while (sum!=n)
+        {
+            // sum+=ar[j];
+            // cout<<sum<<" "<<ar[j]<<endl;
+            if(sum>n)
+            {
+                cout<<sum;
+                sum-=ar[i];
+                cout<<" "<<ar[i]<<" line 1"<<endl;
+                i++;
+            }
+           
+           
+            if (sum<n)
+            {
+                cout<<sum;
+                sum+=ar[i];
+                cout<<" "<<ar[i]<<" line 2 **"<<endl;
+            }
+           
+           
+            if (sum == n)
+            {
+                cout<<sum<<" line 3"<<endl;
+            }
+        }
+        cout<<"/n/n"<<endl;
+    }
+    int sum=0;
+    for(int i=0;i<4;i++)
+    {
+        sum=ar[i];
+        cout<<sum<<" ";
+        while(sum!=n)
+        {
+            sum+=1;
+            cout<<" 1 ";
+            counter++;
+        }
+        // if(counter>1)
+        // {
+        //     cout<<"Flag"<<endl;
+        // }
+        cout<<endl;
+    }
+}
